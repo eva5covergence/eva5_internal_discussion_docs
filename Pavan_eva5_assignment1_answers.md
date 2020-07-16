@@ -186,7 +186,7 @@ But there is new problem came when we change the activation function from Tanh t
 
 When we use ReLU activation function with Xavier weight initialisation, we got an issue again. Let us in Experiment 5 below
 
-***Experiment 5:*** Xavier weight initialisation and tanh as activation function.
+***Experiment 6:*** Xavier weight initialisation and tanh as activation function.
 
 ```
 def relu(x): return x.clamp_min_(0.)
@@ -200,7 +200,7 @@ x.mean(), x.std()
 (tensor(3.7465e-16), tensor(5.6924e-16))
 ```
 
-Experiment 5 got failed as you could see above outputs got vanished. 
+Experiment 6 got failed as you could see above outputs got vanished. 
 
 And below I observed that the standard deviation of each layer is around 16 (which is sqrt(512/2)) (Note: our number of inputs is 512) when we used ReLU with simple random standard normalisation initialised weights.
 
@@ -220,7 +220,7 @@ mean/10000, math.sqrt(var/10000)
 
 So we can resolve this issue if we multiply randomly normalised weights with sort(2/512) which gives the results of each layers outputs having mean of zero and standard deviation as 1.
 
-***Experiment6:*** From the above reasoning that standard deviation of activation outputs for each layer is around sqrt(512/2) - (He initialisation)
+***Experiment7:*** From the above reasoning that standard deviation of activation outputs for each layer is around sqrt(512/2) - (He initialisation)
 
 Above logic formulated by Kaiming He and we mostly use He initialisation in CNN/DNN whenever we use ReLU activation function
 
