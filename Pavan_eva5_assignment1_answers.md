@@ -1,7 +1,7 @@
 1. What are Channels and Kernels (according to EVA)?
 
 
-Channels;
+Channels:
 ————————
 
 Channels are also called as feature maps (feature map name itself suggests that it is a collection of features).
