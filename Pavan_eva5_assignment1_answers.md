@@ -85,6 +85,7 @@ For example, we simulate 100 layer network by multiplying input “x” with wei
 
 ***Experiment1:*** Initialise weights with normalised random values
 
+```
 x= torch.randn(512,512)
 for i in range(100):
   try:
@@ -94,11 +95,13 @@ for i in range(100):
 x.mean(), x.std()
 
 (tensor(nan), tensor(nan))
+```
 
 Above tensor values are nan because they exploded with very big values.
 
 ***Experiment2:*** Initialise weights with normalised random values and make them smaller by multiplying with 0.01
 
+```
 x = torch.randn(512)
 
 for i in range(100):
@@ -108,6 +111,7 @@ for i in range(100):
 x.mean(), x.std() ### Vanishing gradients
 
 (tensor(0.), tensor(0.))
+```
 
 Above tensor values are zeros. That means the output got vanished 
 
@@ -119,6 +123,7 @@ The root cause of experiment1’s failure is that every layer outputs’ varianc
 
 ***Experiment3:*** Initialise the weights with normalised random values and multiply with square_root(1/ (num_of_inputs)) based on the above learning.
 
+```
 x = torch.randn(512)
 for i in range(100):
   try:
@@ -130,6 +135,7 @@ for i in range(100):
 x.mean(), x.std()
 
 (tensor(0.0429), tensor(0.8416))
+```
 
 And we got valid results after 100 layers multiplications. And I observed the mean of each layer is around 0 and standard deviation is 1
 
@@ -140,6 +146,7 @@ Note: We didn’t use any non-linear functions in experiment1 or experiment2 or 
 
 ***Experiment4:*** Let’s use non-linear activation function on top of experiment3
 
+```
 x = torch.randn(512)
 for i in range(100):
   try:
@@ -151,13 +158,15 @@ for i in range(100):
 x.mean(), x.std()
 
 (tensor(0.0009), tensor(0.0549))
+```
 
 And we got decent results after 100 layers multiplications.
 
-Experiment5: Based on Experiment4, Xavier Glorot & Yoshua Bengio found below little modified approach of experiment 3 empirically 
+***Experiment5: Based on Experiment4, Xavier Glorot & Yoshua Bengio found below little modified approach of experiment 3 empirically*** 
 
 Initialise the weights with random uniformed distribution that’s bounded between +/-(sqrt(6/[num_inputs+num+outputs]))
 
+```
 def xavier(m,h):
   return torch.Tensor(m,h).uniform_(-1,1)*math.sqrt(6./(m+h))
 
@@ -169,6 +178,7 @@ for i in range(100):
 x.mean(), x.std()
 
 (tensor(0.0024), tensor(0.0794))
+```
 
 Experiment5 which found by Xavier & Yoshua gave good results. And it maintained around mean of 0 and SD of 1 at each and every layer.
 
@@ -178,6 +188,7 @@ When we use ReLU activation function with Xavier weight initialisation, we got a
 
 ***Experiment 5:*** Xavier weight initialisation and tanh as activation function.
 
+```
 def relu(x): return x.clamp_min_(0.)
 
 x = torch.randn(512)
@@ -187,11 +198,13 @@ for i in range(100):
 
 x.mean(), x.std()
 (tensor(3.7465e-16), tensor(5.6924e-16))
+```
 
 Experiment 5 got failed as you could see above outputs got vanished. 
 
 And below I observed that the standard deviation of each layer is around 16 (which is sqrt(512/2)) (Note: our number of inputs is 512) when we used ReLU with simple random standard normalisation initialised weights.
 
+```
 mean, var = 0.0, 0.0
 
 for i in range(10000):
@@ -203,6 +216,7 @@ for i in range(10000):
 
 mean/10000, math.sqrt(var/10000)
 (9.01886348772049, 15.995159460657934)
+```
 
 So we can resolve this issue if we multiply randomly normalised weights with sort(2/512) which gives the results of each layers outputs having mean of zero and standard deviation as 1.
 
@@ -210,6 +224,7 @@ So we can resolve this issue if we multiply randomly normalised weights with sor
 
 Above logic formulated by Kaiming He and we mostly use He initialisation in CNN/DNN whenever we use ReLU activation function
 
+```
 def kaiming(m,n):
   return torch.randn(m,n)*math.sqrt(2./m)
 
@@ -221,6 +236,7 @@ for i in range(100):
 x.mean(), x.std()
 
 (tensor(0.4737), tensor(0.6989))
+```
 
 We got valid outputs even with ReLU activation function when we used He Initialisation of weights.
 
