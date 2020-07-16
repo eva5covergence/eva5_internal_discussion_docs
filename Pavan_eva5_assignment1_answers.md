@@ -1,7 +1,7 @@
 **1. What are Channels and Kernels (according to EVA)?**
 
 
-*Channels:*
+***Channels:***
 
 Channels are also called as feature maps (feature map name itself suggests that it is a collection of features).
 Convolution operation over input by a kernel/filter gives a single channel as output. So if there are n filters convolve over input will get n channels as output. (We apply some non-linearity function like ReLU on top of it)
@@ -9,7 +9,7 @@ Convolution operation over input by a kernel/filter gives a single channel as ou
 So Channel is a representation of an image which has features (like edges/ gradients/ patterns/ textures / objects).
 
 
-*Kernels:*
+***Kernels:***
 
 Kernel is also called as filter or feature extractor.
 
@@ -34,7 +34,7 @@ So you may question that why can’t we choose 1x1 or 2x2?
 
 When we do convolution operation by a kernel over an image, the image size(height and width) reduces gradually unless we do padding on the input. Here reducing means we are throwing out some information, so with padding we can maintain same size as input with 3x3 but can’t with 2x2.
 
-*Example:*
+***Example:***
 
 Output of convolution formulated as (n-k+2p)/s +1
 
@@ -54,7 +54,7 @@ Output dimension - (10-3+2)/1 + 1 = 10. Here we got same size as input
 
 And coming to 1x1, it is mostly used by pre-trained network authors (ex: GoogleNet) to control the number of output channels/feature_maps.
 
-Ex:
+***Example:***
 
 Input is 10x10x200, we can reduce 10x10x200 to 10x10x1 by applying a single 1x1 filter
 Incase input is 10x10x1 and you apply one 1x1 filter on top of it, you will get 10x10x1 itself. It is a kind of non-linearity effect on the input.
@@ -68,7 +68,7 @@ Here 1x1 kernel does not learn the spatial relationship with the neighbouring pi
 199x199 > 197x197 > 195x195 > 193x193 > 191x191 > 189x189 > 187x187 > 185x185 > 183x183 > 181x181 > 179x179 > 177x177 > 175x175 > 173x173 > 171x171 > 169x169 > 167x167 > 165x165 > 163x163 > 161x161 > 159x159 > 157x157 > 155x155 > 153x153 > 151x151 > 149x149 > 147x147 > 145x145 > 143x143 > 141x141 > 139x139 > 137x137 > 135x135 > 133x133 > 131x131 > 129x129 > 127x127 > 125x125 > 123x123 > 121x121 > 119x119 > 117x117 > 115x115 > 113x113 > 111x111 > 109x109 > 107x107 > 105x105 > 103x103 > 101x101 > 99x99 > 97x97 > 95x95 > 93x93 > 91x91 > 89x89 > 87x87 > 85x85 > 83x83 > 81x81 > 79x79 > 77x77 > 75x75 > 73x73 > 71x71 > 69x69 > 67x67 > 65x65 > 63x63 > 61x61 > 59x59 > 57x57 > 55x55 > 53x53 > 51x51 > 49x49 > 47x47 > 45x45 > 43x43 > 41x41 > 39x39 > 37x37 > 35x35 > 33x33 > 31x31 > 29x29 > 27x27 > 25x25 > 23x23 > 21x21 > 19x19 > 17x17 > 15x15 > 13x13 > 11x11 > 9x9 > 7x7 > 5x5 > 3x3 > 1x1
 
 
-**4. How are kernels initialised? **
+**4. How are kernels initialised?**
 
 I referred below article to understand journey of weight initialisation in DNN. I tried all below experiments put my understandings here.
 
@@ -234,14 +234,14 @@ During the training of DNN, it is trying to find a function in a mathematical sp
 
 In detail, following things happen in DNN
 
-*Feed forward:*
+***Feed forward:***
 
 1. Define network architecture (layers and neurones in each layer, activation function)
 2. Initialise the weights
 3. Pass the input through root node of network (computation graph) and get the output
 4. Calculate the loss using appropriate loss function L(f(input),output)
 
-*Backward propagation:*
+***Backward propagation:***
 
 1. Calculate the gradients or partial derivatives - Change in loss w.r.to change in weights
 2. Adjust the weights using respective gradients w.r.to those weights - say simple vanilla SGD ==>  W -= (learning_rate) * (dL/dW)
