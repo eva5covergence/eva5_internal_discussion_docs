@@ -1,8 +1,7 @@
-1. What are Channels and Kernels (according to EVA)?
+**1. What are Channels and Kernels (according to EVA)?**
 
 
-Channels:
-————————
+*Channels:*
 
 Channels are also called as feature maps (feature map name itself suggests that it is a collection of features).
 Convolution operation over input by a kernel/filter gives a single channel as output. So if there are n filters convolve over input will get n channels as output. (We apply some non-linearity function like ReLU on top of it)
@@ -10,8 +9,7 @@ Convolution operation over input by a kernel/filter gives a single channel as ou
 So Channel is a representation of an image which has features (like edges/ gradients/ patterns/ textures / objects).
 
 
-Kernels:
-————————
+*Kernels:*
 
 Kernel is also called as filter or feature extractor.
 
@@ -22,7 +20,7 @@ Example of conventional image processing filter is - Sobel filter which helps to
 Kernel/Filter convolve over input (image or representation of image [hidden layers activations]) and gives the output channels/feature_maps.
 
 
-2. Why should we (nearly) always use 3x3 kernels?
+**2. Why should we (nearly) always use 3x3 kernels?**
 
 
 
@@ -36,7 +34,7 @@ So you may question that why can’t we choose 1x1 or 2x2?
 
 When we do convolution operation by a kernel over an image, the image size(height and width) reduces gradually unless we do padding on the input. Here reducing means we are throwing out some information, so with padding we can maintain same size as input with 3x3 but can’t with 2x2.
 
-Example:
+*Example:*
 
 Output of convolution formulated as (n-k+2p)/s +1
 
@@ -63,14 +61,14 @@ Incase input is 10x10x1 and you apply one 1x1 filter on top of it, you will get 
 
 Here 1x1 kernel does not learn the spatial relationship with the neighbouring pixels.
 
-3. How many times to we need to perform 3x3 convolutions operations to reach close to 1x1 from 199x199 (type each layer output like 199x199 > 197x197...)
+**3. How many times to we need to perform 3x3 convolutions operations to reach close to 1x1 from 199x199 (type each layer output like 199x199 > 197x197...)**
 
 99 convolution operations need to performed with 3x3 over 199x199 to reach 1x1
 
 199x199 > 197x197 > 195x195 > 193x193 > 191x191 > 189x189 > 187x187 > 185x185 > 183x183 > 181x181 > 179x179 > 177x177 > 175x175 > 173x173 > 171x171 > 169x169 > 167x167 > 165x165 > 163x163 > 161x161 > 159x159 > 157x157 > 155x155 > 153x153 > 151x151 > 149x149 > 147x147 > 145x145 > 143x143 > 141x141 > 139x139 > 137x137 > 135x135 > 133x133 > 131x131 > 129x129 > 127x127 > 125x125 > 123x123 > 121x121 > 119x119 > 117x117 > 115x115 > 113x113 > 111x111 > 109x109 > 107x107 > 105x105 > 103x103 > 101x101 > 99x99 > 97x97 > 95x95 > 93x93 > 91x91 > 89x89 > 87x87 > 85x85 > 83x83 > 81x81 > 79x79 > 77x77 > 75x75 > 73x73 > 71x71 > 69x69 > 67x67 > 65x65 > 63x63 > 61x61 > 59x59 > 57x57 > 55x55 > 53x53 > 51x51 > 49x49 > 47x47 > 45x45 > 43x43 > 41x41 > 39x39 > 37x37 > 35x35 > 33x33 > 31x31 > 29x29 > 27x27 > 25x25 > 23x23 > 21x21 > 19x19 > 17x17 > 15x15 > 13x13 > 11x11 > 9x9 > 7x7 > 5x5 > 3x3 > 1x1
 
 
-4. How are kernels initialised? 
+**4. How are kernels initialised? **
 
 I referred below article to understand journey of weight initialisation in DNN. I tried all below experiments put my understandings here.
 
@@ -85,7 +83,7 @@ Naive ideas like initialise the weights with zeros or normally distributed rando
 
 For example, we simulate 100 layer network by multiplying input “x” with weight matrix “a” 100 times
 
-Experiment1: Initialise weights with normalised random values
+***Experiment1:*** Initialise weights with normalised random values
 
 x= torch.randn(512,512)
 for i in range(100):
@@ -99,7 +97,7 @@ x.mean(), x.std()
 
 Above tensor values are nan because they exploded with very big values.
 
-Experiment2: Initialise weights with normalised random values and make them smaller by multiplying with 0.01
+***Experiment2:*** Initialise weights with normalised random values and make them smaller by multiplying with 0.01
 
 x = torch.randn(512)
 
@@ -119,7 +117,7 @@ Above Both experiments failed. Experiment1 failed because the outputs got explod
 The root cause of experiment1’s failure is that every layer outputs’ variance is around 512 in each layer, so got exploded. Interestingly one observation here is that our input x size is also 512.
 
 
-Experiment3: Initialise the weights with normalised random values and multiply with square_root(1/ (num_of_inputs)) based on the above learning.
+***Experiment3:*** Initialise the weights with normalised random values and multiply with square_root(1/ (num_of_inputs)) based on the above learning.
 
 x = torch.randn(512)
 for i in range(100):
@@ -140,7 +138,7 @@ So Experiment3 approach helped to maintain mean of 0 and SD 1, leads no issues (
 
 Note: We didn’t use any non-linear functions in experiment1 or experiment2 or experiment 3. But in real time non-linear function need to be applied to classify or regress well on real time data as most of the real time data is non-linear in nature.
 
-Experiment4: Let’s use non-linear activation function on top of experiment3
+***Experiment4:*** Let’s use non-linear activation function on top of experiment3
 
 x = torch.randn(512)
 for i in range(100):
@@ -178,7 +176,7 @@ But there is new problem came when we change the activation function from Tanh t
 
 When we use ReLU activation function with Xavier weight initialisation, we got an issue again. Let us in Experiment 5 below
 
-Experiment 5: Xavier weight initialisation and tanh as activation function.
+***Experiment 5:*** Xavier weight initialisation and tanh as activation function.
 
 def relu(x): return x.clamp_min_(0.)
 
@@ -208,7 +206,7 @@ mean/10000, math.sqrt(var/10000)
 
 So we can resolve this issue if we multiply randomly normalised weights with sort(2/512) which gives the results of each layers outputs having mean of zero and standard deviation as 1.
 
-Experiment6: From the above reasoning that standard deviation of activation outputs for each layer is around sqrt(512/2) - (He initialisation)
+***Experiment6:*** From the above reasoning that standard deviation of activation outputs for each layer is around sqrt(512/2) - (He initialisation)
 
 Above logic formulated by Kaiming He and we mostly use He initialisation in CNN/DNN whenever we use ReLU activation function
 
@@ -230,20 +228,20 @@ So our weight initialisation aim is to have mean of 0 and standard deviation 1 i
 
 We need to define our own customised weight initialisation when we try to use a customised activation function by keeping above aim in mind.
 
-5. What happens during the training of a DNN?
+**5. What happens during the training of a DNN?**
 
 During the training of DNN, it is trying to find a function in a mathematical space such that f(input) = output. This function has lot of parameters or weights. Network will find out these weights through optimisation algorithm like gradient descent applies on loss function like L(f(input),output)
 
 In detail, following things happen in DNN
 
-Feed forward:
+*Feed forward:*
 
 1. Define network architecture (layers and neurones in each layer, activation function)
 2. Initialise the weights
 3. Pass the input through root node of network (computation graph) and get the output
 4. Calculate the loss using appropriate loss function L(f(input),output)
 
-Backward propagation 
+*Backward propagation:*
 
 1. Calculate the gradients or partial derivatives - Change in loss w.r.to change in weights
 2. Adjust the weights using respective gradients w.r.to those weights - say simple vanilla SGD ==>  W -= (learning_rate) * (dL/dW)
