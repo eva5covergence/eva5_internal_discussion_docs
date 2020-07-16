@@ -162,7 +162,7 @@ x.mean(), x.std()
 
 And we got decent results after 100 layers multiplications.
 
-***Experiment5: Based on Experiment4, Xavier Glorot & Yoshua Bengio found below little modified approach of experiment 3 empirically*** 
+***Experiment5:*** Based on Experiment4, Xavier Glorot & Yoshua Bengio found below little modified approach of experiment 3 empirically
 
 Initialise the weights with random uniformed distribution that’s bounded between +/-(sqrt(6/[num_inputs+num+outputs]))
 
