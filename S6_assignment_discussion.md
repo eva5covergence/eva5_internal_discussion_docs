@@ -2,9 +2,9 @@
 **Pending Items:**
 
 1. Run the code get best hyper paras
-		a) L1 + BN - Pavan,
-		b) L2+ BN - Ezhriko,
-		c) L1+ L2+ BN - Varsha
+		- L1 + BN - Pavan,
+		- L2+ BN - Ezhriko,
+		- L1+ L2+ BN - Varsha
 2. Add GBN to the code and create a separate model class - Pavan
 3. Add the function which takes inputs of model and its accuracies & its losses as input and drew a graph - Ezhriko
 4. Finally run all 5 models using best hyper paras from step 1 and use above function to draw the graph - Varsha
@@ -24,9 +24,9 @@ FYI - There is a method to save model written in shared notebook by me in case w
 
 With above approach Coarse and Finer search  4 * 4 * 20 * 10 = 3200 epochs overall to get best parameters for 4 models (l1, l2, l1&l2) with BN & l1&l2 with GBN
 
-4 - number of models
-4 - number of ranges
-20 - number of random values per range
-10 - number of epochs
+- 4 - number of models
+- 4 - number of ranges
+- 20 - number of random values per range
+- 10 - number of epochs
 
 Total 3200 epochs to get best parameters to run even we keep number of epochs as 10.
