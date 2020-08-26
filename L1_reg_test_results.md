@@ -1,4 +1,8 @@
-**L1 regularisation test results over 10 epochs:**
+L1 regularisation test results over 10 epochs:
+----------------------------------------------
+
+**Tried 20 random values between 0-1 and below are results of 20 test cases:**
+
 
 For L1 lambda parameter 0.46547436621115057 Best train Accuracy 11.236666666666666% and Best Test Accuracy 11.35% at Epoch 8
 Model is getting trained with L1 regularisation parameter 0.29753305970468225
@@ -58,3 +62,8 @@ For L1 lambda parameter 0.9941242932229496 Best train Accuracy 10.44166666666666
 Model is getting trained with L1 regularisation parameter 0.347977489753009
 
 For L1 lambda parameter 0.347977489753009 Best train Accuracy 10.441666666666666% and Best Test Accuracy 10.28% at Epoch 1
+
+
+**Tried 20 random values between 0-0.01 and below are results of 20 test cases:**
+
+<currently model is running, will update soon>
