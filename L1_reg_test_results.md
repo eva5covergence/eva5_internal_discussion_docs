@@ -4,7 +4,7 @@ Session6 results:
 L1 regularisation test results over 10 epochs:
 ----------------------------------------------
 
-**Tried 20 random values between 0-1 and below are results of 20 test cases:**
+**Tried 20 random values between [0-1] and below are results of 20 test cases:**
 
 
 For L1 lambda parameter 0.46547436621115057 Best train Accuracy 11.236666666666666% and Best Test Accuracy 11.35% at Epoch 8
@@ -67,8 +67,47 @@ Model is getting trained with L1 regularisation parameter 0.347977489753009
 For L1 lambda parameter 0.347977489753009 Best train Accuracy 10.441666666666666% and Best Test Accuracy 10.28% at Epoch 1
 
 
-**Tried 20 random values between 0-0.01 and below are results of 20 test cases:**
-<TODO>
+**Tried 20 random values between [0-0.01] and below are results of 20 test cases:**
+
+For L1 lambda parameter 0.0017738478307625849 Best train Accuracy 90.77333333333333% and Best Test Accuracy 92.07% at Epoch 3
+
+For L1 lambda parameter 0.005035830604310093 Best train Accuracy 89.09166666666667% and Best Test Accuracy 91.08% at Epoch 3
+
+For L1 lambda parameter 0.009879326139919174 Best train Accuracy 86.25166666666667% and Best Test Accuracy 89.71% at Epoch 10
+
+For L1 lambda parameter 0.009435333585073645 Best train Accuracy 96.045% and Best Test Accuracy 97.12% at Epoch 7
+
+For L1 lambda parameter 0.0002293430327615509 Best train Accuracy 98.035% and Best Test Accuracy 98.27% at Epoch 10
+
+For L1 lambda parameter 0.005731134243569515 Best train Accuracy 97.95% and Best Test Accuracy 98.31% at Epoch 1
+
+For L1 lambda parameter 0.003258535210617881 Best train Accuracy 97.865% and Best Test Accuracy 98.31% at Epoch 8
+
+For L1 lambda parameter 0.00043247883850730973 Best train Accuracy 98.02666666666667% and Best Test Accuracy 98.41% at Epoch 10
+
+For L1 lambda parameter 0.00538834630180158 Best train Accuracy 98.00666666666666% and Best Test Accuracy 98.44% at Epoch 2
+
+For L1 lambda parameter 0.0037402523160511405 Best train Accuracy 98.07333333333334% and Best Test Accuracy 98.43% at Epoch 7
+
+For L1 lambda parameter 0.003186499254142706 Best train Accuracy 98.09833333333333% and Best Test Accuracy 98.4% at Epoch 8
+
+For L1 lambda parameter 0.00742846834778066 Best train Accuracy 98.11833333333334% and Best Test Accuracy 98.41% at Epoch 3
+
+For L1 lambda parameter 0.004534310466205303 Best train Accuracy 98.04% and Best Test Accuracy 98.41% at Epoch 4
+
+For L1 lambda parameter 6.776903745092544e-05 Best train Accuracy 98.11166666666666% and Best Test Accuracy 98.43% at Epoch 8
+
+For L1 lambda parameter 0.0025249299422219484 Best train Accuracy 98.065% and Best Test Accuracy 98.39% at Epoch 8
+
+For L1 lambda parameter 0.004567350245893372 Best train Accuracy 98.08833333333334% and Best Test Accuracy 98.43% at Epoch 1
+
+For L1 lambda parameter 0.00988758170311553 Best train Accuracy 98.12% and Best Test Accuracy 98.42% at Epoch 10
+
+For L1 lambda parameter 0.006577604492199174 Best train Accuracy 98.06166666666667% and Best Test Accuracy 98.4% at Epoch 1
+
+For L1 lambda parameter 0.006638307316348648 Best train Accuracy 98.11166666666666% and Best Test Accuracy 98.43% at Epoch 7
+
+For L1 lambda parameter 0.004560855376564345 Best train Accuracy 98.07833333333333% and Best Test Accuracy 98.4% at Epoch 2
 
 **Tried 20 random values between [0,0.001] and below are results of 20 test cases:**
 
