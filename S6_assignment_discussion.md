@@ -1,5 +1,5 @@
 
-**Pending Items**
+**Pending Items:**
 
 1. Run the code get best hyper paras
 		L1 + BN - Pavan
@@ -10,9 +10,9 @@
 3. Finally run all 5 models using best hyper paras from step 1 and use above function to draw the graph - Varsha
 4. Misclassified images by GBN - We will see at the end
 
-FYI - There is a method to save model in case want to save the model in case of GBN model
+FYI - There is a method to save model written in shared notebook by me in case want to save the model in case of GBN model
 
-**Hyper parameter search approach: **
+**Hyper parameter search approach:**
 
 Different Algorithms (l1, l2, l1&l2) with BN & l1&l2 with GBN
 	Multiple ranges ([0-1],[0-0.01],[0-0.001], [0-0.0001])
