@@ -135,9 +135,9 @@ For L1 lambda parameter 0.000912167373230605 Best train Accuracy 99.38% and Best
 
 For L1 lambda parameter 0.000883714090090999 Best train Accuracy 99.385% and Best Test Accuracy 99.35% at Epoch 2
 
-For L1 lambda parameter 4.9431672827224384e-05 Best train Accuracy 99.36666666666666% and Best Test Accuracy 99.36% at Epoch 2 <== highest - good one as no overfit
+**For L1 lambda parameter 4.9431672827224384e-05 Best train Accuracy 99.36666666666666% and Best Test Accuracy 99.36% at Epoch 2 <== highest - good one as no overfit**
 
-For L1 lambda parameter 2.6027274107961796e-05 Best train Accuracy 99.42666666666666% and Best Test Accuracy 99.37% at Epoch 4 <== highest - very little overfit
+**For L1 lambda parameter 2.6027274107961796e-05 Best train Accuracy 99.42666666666666% and Best Test Accuracy 99.37% at Epoch 4 <== highest - very little overfit**
 
 For L1 lambda parameter 0.0001645848060913594 Best train Accuracy 99.38833333333334% and Best Test Accuracy 99.34% at Epoch 3
 
