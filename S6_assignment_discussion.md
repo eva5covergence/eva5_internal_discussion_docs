@@ -2,13 +2,13 @@
 **Pending Items:**
 
 1. Run the code get best hyper paras
-		L1 + BN - Pavan
-		L2+ BN - Ezhriko
-		L1+ L2+ BN - Varsha
-1. Add GBN to the code and create a separate model class - Pavan
-2. Add the function which takes inputs of model and its accuracies & its losses as input and drew a graph - Ezhriko
-3. Finally run all 5 models using best hyper paras from step 1 and use above function to draw the graph - Varsha
-4. Misclassified images by GBN - We will see at the end
+		a) L1 + BN - Pavan,
+		b) L2+ BN - Ezhriko,
+		c) L1+ L2+ BN - Varsha
+2. Add GBN to the code and create a separate model class - Pavan
+3. Add the function which takes inputs of model and its accuracies & its losses as input and drew a graph - Ezhriko
+4. Finally run all 5 models using best hyper paras from step 1 and use above function to draw the graph - Varsha
+5. Misclassified images by GBN - We will see at the end
 
 FYI - There is a method to save model written in shared notebook by me in case want to save the model in case of GBN model
 
