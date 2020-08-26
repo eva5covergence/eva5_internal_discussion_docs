@@ -14,13 +14,13 @@ FYI - There is a method to save model written in shared notebook by me in case w
 
 **Hyper parameter search approach:**
 
-Different Algorithms (l1, l2, l1&l2) with BN & l1&l2 with GBN
-	Multiple ranges ([0-1],[0-0.01],[0-0.001], [0-0.0001])
-		multiple values in each range
-			multiple epochs
-			Get best results in all epochs
-		get best results in all values of specific range
-	Get best results over all ranges
+- Different Algorithms (l1, l2, l1&l2) with BN & l1&l2 with GBN
+	- Multiple ranges ([0-1],[0-0.01],[0-0.001], [0-0.0001])
+		- multiple values in each range
+			- multiple epochs
+			- Get best results in all epochs
+		- get best results in all values of specific range
+	- Get best results over all ranges
 
 With above approach Coarse and Finer search  4 * 4 * 20 * 10 = 3200 epochs overall to get best parameters for 4 models (l1, l2, l1&l2) with BN & l1&l2 with GBN
 
