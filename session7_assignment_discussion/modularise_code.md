@@ -12,7 +12,7 @@
     - https://github.com/imadtoubal/Pytorch-Flask-Starter
     - https://github.com/norahsakal/flask-pytorch-backend
   
-# 3. Build the use cases for FronEnd and develop FrontEnd - Need to discuss about the use cases
+# 3. Build the use cases for FrontEnd and develop FrontEnd - Need to discuss about the use cases
 
     - if it is from scratch - preferrable framework is FLUTTER -Google's JS framework compatiable to all devices - Android, IOS, desktop, tablet etc...
     - Else we can use some ready to use SaaS  solution - https://www.streamlit.io/
