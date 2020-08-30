@@ -16,3 +16,4 @@ Resources:
 - Logging
 - Documentation
 - Unit testing - pytest
+- Doc strings - need to decide the format of doc strings based on pep8 or any other format
