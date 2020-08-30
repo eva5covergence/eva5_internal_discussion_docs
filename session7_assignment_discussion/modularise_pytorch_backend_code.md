@@ -8,3 +8,11 @@ Resources:
 ![Pytorch_project_template](images/pytorch_project_template.png)
 
 - https://github.com/victoresque/pytorch-template
+
+
+**Coding regulations:**
+
+- PEP8 guidelines - pylint , flake 8 
+- Logging
+- Documentation
+- Unit testing - pytest
