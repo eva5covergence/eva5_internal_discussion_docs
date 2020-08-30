@@ -7,7 +7,7 @@
     
     - https://github.com/victoresque/pytorch-template
   
-# 2. Convert simple function call to REST end points using some framework (Flask preferably)
+# 2. Convert simple function call to REST end points using some framework (Flask preferably) and create docker environment
 
     - https://github.com/imadtoubal/Pytorch-Flask-Starter
     - https://github.com/norahsakal/flask-pytorch-backend
