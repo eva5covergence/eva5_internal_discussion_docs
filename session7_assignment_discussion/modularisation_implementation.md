@@ -4,6 +4,7 @@
 - models/Networks/*.py - mnist_specific config - architecture
 - Orchestrator/*.py 
 - Final Ipynb file in the root folder which triggers main.py
+- Show the architecture of the network in main ipynb file
 
 
 **Issues on google collab that to be fixed:**
