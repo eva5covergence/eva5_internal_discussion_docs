@@ -12,7 +12,7 @@
 - Unable to see plotted graphs
 - Add more logging statements wherever it is needed
 - Check any other issues while executing
-- Session7 specific assignment
+- Session7 specific assignment on advanced convolutions
 
 **Later pending parts:**
 
