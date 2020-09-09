@@ -19,6 +19,7 @@
 - Unit tests
 - Add docstrings and Sphinix Documentation 
 - CICD pipelines
+- Make it distributable and installable - Fix setup.py
 
 
 
