@@ -18,6 +18,7 @@
 
 **Later pending parts:**
 
+- Add a method which returns receptive field for each layer of network
 - Unit tests
 - Add docstrings and Sphinix Documentation 
 - CICD pipelines
