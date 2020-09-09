@@ -9,13 +9,13 @@
 
 **Issues on google collab that to be fixed:**
 
-- Unable to see Tqdm progress and other print statements on ipynb, unable capture tqdm progress in logs
-- Unable to see plotted graphs
-- Add more logging statements wherever it is needed
-- Check any other issues while executing
-- Session7 specific assignment on advanced convolutions
-- Input the dataset name in orchestrator rather than in basic_config
-- ipynb file should download git repo to google drive rather not temporary space provided by google collab
+1. Unable to see Tqdm progress and other print statements on ipynb, unable capture tqdm progress in logs
+2. Unable to see plotted graphs
+3. Add more logging statements wherever it is needed
+4. Check any other issues while executing
+5. Session7 specific assignment on advanced convolutions
+6. Input the dataset name in orchestrator rather than in basic_config
+7. ipynb file should download git repo to google drive rather not temporary space provided by google collab
 
 **Later pending parts:**
 
