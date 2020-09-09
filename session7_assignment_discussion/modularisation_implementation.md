@@ -15,6 +15,7 @@
 - Check any other issues while executing
 - Session7 specific assignment on advanced convolutions
 - Input the dataset name in orchestrator rather than in basic_config
+- ipynb file should download git repo to google drive rather not temporary space provided by google collab
 
 **Later pending parts:**
 
