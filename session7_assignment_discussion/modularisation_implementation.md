@@ -8,15 +8,17 @@
 
 **Issues on google collab that to be fixed:**
 
-Unable to see Tqdm progress and other print statements on ipynb, unable capture tqdm progress in logs
-Unable to see plotted graphs
-add more logging statements wherever it is needed
+- Unable to see Tqdm progress and other print statements on ipynb, unable capture tqdm progress in logs
+- Unable to see plotted graphs
+- Add more logging statements wherever it is needed
+- Check any other issues while executing
+- Session7 specific assignment
 
 **Later pending parts:**
 
-Unit tests
-Add docstrings and Documentation 
-CICD pipelines
+- Unit tests
+- Add docstrings and Documentation 
+- CICD pipelines
 
 
 
