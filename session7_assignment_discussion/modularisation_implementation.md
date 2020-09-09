@@ -17,7 +17,7 @@
 **Later pending parts:**
 
 - Unit tests
-- Add docstrings and Documentation 
+- Add docstrings and Sphinix Documentation 
 - CICD pipelines
 
 
