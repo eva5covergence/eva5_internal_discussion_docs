@@ -13,6 +13,7 @@
 - Add more logging statements wherever it is needed
 - Check any other issues while executing
 - Session7 specific assignment on advanced convolutions
+- Input the dataset name in orchestrator rather than in basic_config
 
 **Later pending parts:**
 
