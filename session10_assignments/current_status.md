@@ -18,7 +18,6 @@ resnet_session9_lr_finder.py
 Session10_assignment_lr_finder.ipynb
 Session10_assignment.ipynb
 
-====================================
 **Implentation details:**
 
 - Implemented reduceLRplataeu
@@ -31,11 +30,6 @@ Session10_assignment.ipynb
 **Pending items**
 
 - display 25 misclassified images of grad cam - make it look as gallery of images (image grid)
-
-
-
-
-====================================
 
 **lr_finder results at multiple runs for lr_finder.get_best_lr_sgd(model, train_loader, lr=1e-7, momentum=0.9, end_lr=100, num_iter=100)**
 
