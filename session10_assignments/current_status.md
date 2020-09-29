@@ -3,20 +3,20 @@
 **Updated files:**
 
 
-basic_config.py
-model_builder.py
-misc_utils.py
-base_data_transforms.py
+- basic_config.py
+- model_builder.py
+- misc_utils.py
+- base_data_transforms.py
 
 **New files:**
 
-get_optimizer.py
-get_lr_scheduler.py
-lr_finder.py
-resnet_session9_lr_finder.py
+- get_optimizer.py
+- get_lr_scheduler.py
+- lr_finder.py
+- resnet_session9_lr_finder.py
 
-Session10_assignment_lr_finder.ipynb
-Session10_assignment.ipynb
+- Session10_assignment_lr_finder.ipynb
+- Session10_assignment.ipynb
 
 **Implentation details:**
 
