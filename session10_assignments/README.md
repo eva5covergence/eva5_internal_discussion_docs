@@ -33,7 +33,7 @@ And also we added a method **get_lr(optimizer)** to catpure and monitor change i
 3. We also tried cooldown with different values 0 and 1. As cool down waits to make effect of new LR updated by ReduceLROnPlateau for certain number of epochs based on the number you define to cooldown parameter. But we observed it has slow down the training to some extent.
 4. With Final resultant combination patience=5, factor=0.2 and cooldown=0 with other parameters default values we tried the frequently suggested learning rates **1.00E-01**, **6.58E-02** and **5.34E-02**. And we got **best validation accuracy of 91.60 %** with learning rate **5.34E-02** and this ReduceLROnPlateau combination.
 
-**Our Experiments: **
+**Our Experiments:**
 
 ```
 TA - Training Accuracy and VA - Validation accuracy
