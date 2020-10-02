@@ -38,7 +38,7 @@ And also we added a method **get_lr(optimizer)** to catpure and monitor change i
 ```
 TA - Training Accuracy and VA - Validation accuracy
 
-init Lr = 0.1
+init LR = 0.1
 
 Patience - 3 and factor-0.1, cool down - 0 - 95.28(TA) and 89.29(VA)
 Patience - 2, and factor - 0.1, cool down - 0 - 96.01(TA) and 89.96(VA) 
@@ -47,11 +47,11 @@ Patience - 2 and factor- 0.2,  cool down - 0 - 92.94(TA) and 88.17(VA)
 Patience - 3 and factor-0.2, cool down - 0 - 96.12(TA) and 90.08(VA) 
 Patience - 3 and factor-0.3, cool down - 0 - 95.30(TA) and 90.0(VA)
 
-Init lr =6.58E-02
+Init LR =6.58E-02
 
 Patience - 3 and factor-0.2, cool down - 0 - 96.47(TA) and 90.76(VA)
 
-Init lr = 5.34E-02
+Init LR = 5.34E-02
 
 Patience - 3 and factor-0.2, cool down - 0 - 96.47(TA) and 90.08(VA)
 Patience - 5 and factor-0.2, cool down - 0 - 97.80(TA) and 91.60(VA)
