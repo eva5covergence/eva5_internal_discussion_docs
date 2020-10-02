@@ -1,4 +1,4 @@
-**README On LRs:**
+**README On LRs and LR Scheduler ReduceLROnPlateau:**
 
 We implemented a method **get_best_lr_sgd** which takes the inputs [model, trainloader, lr=1e-7, momentum=0.9, end_lr=100, num_iter=100] and process them
 using **LRFinder** and returns lr_finder object & plots the graph between **learning rates** and **Loss** as below.
