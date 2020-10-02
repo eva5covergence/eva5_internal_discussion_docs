@@ -46,25 +46,25 @@ lr_finder.get_best_lr_sgd(model_temp, train_loader, lr=1e-7, momentum=0.9, end_l
 **README On LRs:**
 
 We implemented a method **get_best_lr_sgd** which takes the inputs [model, trainloader, lr=1e-7, momentum=0.9, end_lr=100, num_iter=100] and process them
-using **LRFinder** and returns lr_finder object & plots the graph between **learning rates** and **Loss"**
+using **LRFinder** and returns lr_finder object & plots the graph between **learning rates** and **Loss** as below.
 
 ![](images/lr_finder_plot_lrs_loss.png)
 
-And also we implemented a method "get_reducelronplateau_scheduler" which takes the inputs [optimizer, mode, factor, patience, threshold, threshold_mode, cooldown,
+And also we implemented a method **get_reducelronplateau_scheduler** which takes the inputs [optimizer, mode, factor, patience, threshold, threshold_mode, cooldown,
 min_lr] and process them using **ReduceLROnPlateau**
 
-To get the best validation accuracies of the model, we tried to tune the learning rate and r
-
+To get the best validation accuracies of the model, we tried to tune the learning rate and ReduceLROnPlateau parameters [factor, patience, cooldown].
 
 When we ran lr_finder for multiple times we got below suggested best LRs
 
 - 1.52E-01
-- 1.00E-01
-- 6.58E-02
-- 1.00E-01
-- 1.00E-01
-- 5.34E-02
-- 6.58E-02
+- **1.00E-01**
+- **6.58E-02**
+- **1.00E-01**
+- **1.00E-01**
+- **5.34E-02**
+- **6.58E-02**
+- **5.34E-02**
 - 2.31E-01
 
-Out of these, we tried frequently suggested LRs 1.00E-01 and 6.58E-02. LR 6.58E-02 gave best results of 90.76% validation acc within 50 epochs.
+Out of these, we tried frequently suggested LRs 1.00E-01, 6.58E-02 and - 5.34E-02 with various combinations of ReduceLROnPlateau parameters.
