@@ -54,7 +54,7 @@ Patience - 3 and factor-0.2, cool down - 0 - 96.47(TA) and 90.76(VA)
 Init LR = 5.34E-02
 
 Patience - 3 and factor-0.2, cool down - 0 - 96.47(TA) and 90.08(VA)
-Patience - 5 and factor-0.2, cool down - 0 - 97.80(TA) and 91.60(VA)
+Patience - 5 and factor-0.2, cool down - 0 - 97.80(TA) and 91.60(VA) - Best results
 
 ```
 
