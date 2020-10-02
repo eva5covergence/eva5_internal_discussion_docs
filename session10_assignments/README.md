@@ -28,8 +28,8 @@ And also we added a method **get_lr(optimizer)** to catpure and monitor change i
 
 **Our observations and intuition behind reaching best combination:**
 
-1. We monitored the change in learning rate by ReduceLROnPlateau w.r.to the change in loss and observed the patience around the value 5 gives good results after tried with different patience values 2, 3, 5, and 10 by keeping others constant.
-2. We did similar experiement on factor with different values 0.1, 0.2 and 0.3 by keeping others constant and observed 0.2 gave better results compared to others. When we increase the factor from default value 0.1 to 0.2, it has given better results but when we increased factor from 0.2 to 0.3, we observed there were lot of fluctuations in loss and accuracy curves.
+1. We monitored the change in learning rate by ReduceLROnPlateau w.r.to the change in loss and observed the patience around the value 5 gives good results after tried with different patience values 2, 3, 5, and 10 by keeping other parameters constant.
+2. We did similar experiement on factor with different values 0.1, 0.2 and 0.3 by keeping other parameters constant and observed 0.2 gave better results compared to others. When we increase the factor from default value 0.1 to 0.2, it has given better results but when we increased factor from 0.2 to 0.3, we observed there were lot of fluctuations in loss and accuracy curves.
 3. We also tried cooldown with different values 0 and 1. As cool down waits to make effect of new LR updated by ReduceLROnPlateau for certain number of epochs based on the number you define to cooldown parameter. But we observed it has slow down the training to some extent.
 4. With Final resultant combination patience=5, factor=0.2 and cooldown=0 with other parameters default values we tried the frequently suggested learning rates **1.00E-01**, **6.58E-02** and **5.34E-02**. And we got **best validation accuracy of 91.60 %** with learning rate **5.34E-02** and this ReduceLROnPlateau combination.
 
