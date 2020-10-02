@@ -58,7 +58,7 @@ Patience - 5 and factor-0.2, cool down - 0 - 97.80(TA) and 91.60(VA)
 
 ```
 
-And we plotted captured change in LRs by ReduceLROnPlateau during our final model training as below and observed that LR got reduced at 33rd and then at 47th epoch by ReduceLROnPlateau, so higher learning rate helped the early epochs from 1 - 33, but after that lower learning rate helped while reaching near the local minima.
+And we plotted captured change in LRs by ReduceLROnPlateau during our final model training as below and observed that LR got reduced at 33rd and then at 47th epoch by ReduceLROnPlateau, so higher learning rate helped the early epochs from 1 - 32, but after that lower learning rate helped while reaching near the local minima.
 
 ![](images/lr_change_reduce_lr_plateau.png)
 
