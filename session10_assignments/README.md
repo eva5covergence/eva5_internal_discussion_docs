@@ -26,7 +26,7 @@ Out of these, we tried frequently suggested LRs **1.00E-01**, **6.58E-02** and *
 
 And also we added a method **get_lr(optimizer)** to catpure and monitor change in learning rate by ReduceLROnPlateau. This helps us to get the intuition behind setting the right value of patience, factor and cooldown parameters.
 
-**Our observations and intuition behind reaching above combination:**
+**Our observations and intuition behind reaching best combination:**
 
 1. We monitored the change in learning rate by ReduceLROnPlateau w.r.to the change in loss and observed the patience around the value 5 gives good results after tried with different patience values 2, 3, 5, and 10 by keeping others constant.
 2. We did similar experiement on factor with different values 0.1, 0.2 and 0.3 by keeping others constant and observed 0.2 gave better results compared to others. When we increase the factor from default value 0.1 to 0.2, it has given better results but when we increased factor from 0.2 to 0.3, we observed there were lot of fluctuations in loss and accuracy curves.
