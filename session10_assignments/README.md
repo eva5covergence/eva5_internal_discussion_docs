@@ -67,3 +67,24 @@ And we plotted captured change in LRs by ReduceLROnPlateau during our final mode
 
 ![](images/lr_change_reduce_lr_plateau.png)
 
+**********************************************************************************************************************
+### Cutout Image augumentation
+Data augmentation is one solution to avoid overfitting a training dataset of images. While dropout is a very common technique which directly affect the model parameters, might not always be the best choice for regularization. Some reasons for that are that those methods require larger datasets since the model’s capacity is randomly reduced.
+The Cutout Regularization is simple and easy to implementation. The algorithm works by simply masking out contiguous squares of an image. Cutout augmentation forces a CNN model to develop a more diverse set of features for classifying images. Instead of just focusing on the wheels of a car, Cutout Regularization forces the model to look at other details of the image.
+The CIFAR 10 dataset is used in this assignment for trainning. In this dataset image size is 32x32, hence the cut out height and width is choosen to be 16. i.e 50% of the image size. Number of holes was choosen to be 1 for experimentation purpose and calculated mean on CIFAR 10 data set is used to fill the cutout portion. After applying Cutout augmentation, the overfitting of the model significantly reduced and help to perform better. 
+
+The model after training for 50 epochs 
+Train accuracy: 97.80
+Test accuracy: 91.60
+
+![](images/Cutout.png)
+
+### Gradcam Misclassification image
+
+The Trained model was made to do prediction on test data using test dataloader, the test images were passed to the gradcam class to get the mask and heatmap image.
+A custom Gradcam image visualization function is written which will display 25 misclassified images in a 5x5 image grid. The actual and predicted label will be printed above the gradcam image.
+
+![](images/Missclassified.png)
+
+
+
