@@ -21,7 +21,7 @@ def get_best_lr_sgd(model, trainloader, lr=1e-7, momentum=0.9, end_lr=100, num_i
     return lr_finder
     # lr_finder.reset() # to reset the model and optimizer to their initial state
     
-**README On LRs: **
+**README On LRs:**
 We implemented a method "get_best_lr_sgd" which takes the inputs [model, trainloader, lr=1e-7, momentum=0.9, end_lr=100, num_iter=100] and process them
 using **LRFinder** and returns lr_finder object & plots the graph between **learning rates** and **Loss"**
 
